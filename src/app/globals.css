@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-image: url("/noise.png");
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/IBMPlexSans.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+.bg-noise2 {
+  color: rgb(var(--foreground-rgb));
+  background-image: url("/noise2.png");
+}
+
+.bg-noise3 {
+  color: rgb(var(--foreground-rgb));
+  background-image: url("/noise6main.png");
+}
+
+.bg-noise4 {
+  color: rgb(var(--foreground-rgb));
+  background-image: url("/noise7main.png");
+}
+
+.triangle {
+  width: 300px;
+  height: 200px;
+  background-image: url("/noise6main.png");
+  clip-path: polygon(0% 0%,
+      100% 0%,
+      100% 0%,
+      100% 20%,
+      80% 40%,
+      50% 50%,
+      40% 55%,
+      20% 60%,
+      0% 80%);
+  transform: scaleY(-1);
+}
+
+@layer components {
+  .input {
+    @apply rounded-xl border-white border backdrop-blur-sm px-2 p-1 text-white bg-blue-950 text-sm m-auto w-20 text-center
+  }
+  .main-container{
+    @apply flex flex-col justify-center items-center mt-12 max-w-4xl text-center m-auto
+  }
+}
