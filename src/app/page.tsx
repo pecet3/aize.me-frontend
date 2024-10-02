@@ -64,6 +64,7 @@ export default function Home() {
                   ease: "linear",
                 },
               }}
+              disabled={true}
               className="flex px-4 text-2xl font-ibm-plex tracking-tight
                 items-center border-2 border-white rounded-lg
                  bg-teal-600 m-auto shadow-lg hover:shadow-slate-900"
@@ -75,8 +76,9 @@ export default function Home() {
 
         <MainGrid />
       </section>
-      <TrainingInfoSection />
-      <OtherProducts />
+      <h1 className="text-6xl">Opening Soon...</h1>
+      {/* <TrainingInfoSection />
+      <OtherProducts /> */}
     </main>
   );
 }
