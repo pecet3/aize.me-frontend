@@ -1,12 +1,13 @@
 "use client";
-import { FluxSchnellForm } from "@/components/model_panels/FluxSchnellForm";
-import { ImagePanel } from "@/components/model_panels/ModelPanel";
-import { useDashboardContext } from "@/utils/dashboardContext";
+
+import { useEffect, useState } from "react";
+import { ImagePanel } from "../../../../components/model_panels/ModelPanel";
+import { FluxSchnellForm } from "../../../../components/model_panels/FluxSchnellForm";
+import { useDashboardContext } from "../../../../utils/dashboardContext";
 import {
   NotificationPayload,
   useNotificationsContext,
-} from "@/utils/notificationsContext";
-import { useEffect, useState } from "react";
+} from "../../../../utils/notificationsContext";
 
 export default function Page() {
   const { user, setUser, isImgLoading, setImages } = useDashboardContext();
