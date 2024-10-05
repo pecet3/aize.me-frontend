@@ -1,7 +1,7 @@
 "use client";
 import { useDashboardContext } from "@/utils/dashboardContext";
 import { useRouter } from "next/navigation";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { Modal } from "./Modal";
 import { Loading } from "./Loading";
 interface ProtectedProps {
@@ -19,6 +19,7 @@ export function Protected({ children }: ProtectedProps) {
     setSelectedImg,
   } = useDashboardContext();
   const router = useRouter();
+
   useEffect(() => {
     if (user) return;
     let counter = 0;

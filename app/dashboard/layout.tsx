@@ -5,7 +5,8 @@ import { Navbar } from "@/components/Navbar";
 import { NavbarDashboard } from "@/components/NavbarDashboard";
 import { LeftPanel, RightPanel } from "./Panels";
 import { ContextProvider } from "../../utils/dashboardContext";
-import { Protected } from "@/components/Protected";
+import { Protected } from "@/components/ProtectedWrapper";
+import { Notifications } from "@/components/NotificationsWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <Protected>
-      <NavbarDashboard />
-      <LeftPanel />
-      <RightPanel />
-      {children}
+      <Notifications>
+        <NavbarDashboard />
+        <LeftPanel />
+        <RightPanel />
+        {children}
+      </Notifications>
     </Protected>
   );
 }

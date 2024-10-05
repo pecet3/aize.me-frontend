@@ -3,18 +3,33 @@ import { BiWindows } from "react-icons/bi";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { IoMdRefresh } from "react-icons/io";
 import { TypeAnimation } from "react-type-animation";
-import { motion, useAnimation } from "framer-motion";
+import { animate, delay, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useLayoutEffect } from "react";
 
 export const TrainingInfoSection = () => {
+  const controlBrowser = useAnimation();
+  const [refBrowser, inViewBrowser] = useInView();
+  const browserVariants = {
+    visible: { opacity: 1, scale: [0.2, 1, 1.05, 1], y: 0 },
+    hidden: { opacity: 0, scale: 0, y: 100 },
+  };
+  useEffect(() => {
+    if (inView) {
+      controlBrowser.start("visible");
+    } else {
+      controlBrowser.start("hidden");
+    }
+    console.log(inView);
+  }, [controlBrowser, inViewBrowser]);
+
   const control = useAnimation();
-  const controlFinal = useAnimation();
   const [ref, inView] = useInView();
+
   const [finalRef, inFinalView] = useInView();
   const image1Variants = {
-    visible1: { opacity: 1, scale: 1, y: -5, rotate: -12 },
-    hidden: { opacity: 0, scale: 0, y: -20 },
+    visible1: { opacity: 1, scale: 1, y: -10, rotate: -12 },
+    hidden: { opacity: 0, scale: 0.2, y: -50, rotate: 0 },
   };
   const image2Variants = {
     visible2: { opacity: 1, scale: 1, y: -15 },
@@ -24,6 +39,8 @@ export const TrainingInfoSection = () => {
     visible3: { opacity: 1, scale: 1, y: -9, rotate: 12 },
     hidden: { opacity: 0, scale: 0, y: -30 },
   };
+
+  const controlFinal = useAnimation();
 
   const finalStepVariants = {
     visible: { opacity: 1, scale: 1 },
@@ -35,14 +52,11 @@ export const TrainingInfoSection = () => {
   useEffect(() => {
     if (inView) {
       control.start("visible1");
-
       control.start("visible2");
-
       control.start("visible3");
     } else {
       control.start("hidden");
     }
-    console.log(inView);
   }, [control, inView]);
   useEffect(() => {
     if (inFinalView) {
@@ -59,12 +73,12 @@ export const TrainingInfoSection = () => {
         justify-start items-center 
        "
     >
-      <h2
+      <motion.h2
         className="underline decoration-4 decoration-wavy underline-offset-2 py-16 px-4
        decoration-teal-400 font-ibm-plex text-4xl md:text-5xl text-center m-auto tracking-wider"
       >
         How it Works?
-      </h2>
+      </motion.h2>
       <div
         className="bg-white bg-opacity-5 rounded-xl pb-4 px-4 flex flex-col 
       md:max-w-6xl w-full items-start justify-start gap-4"
@@ -167,10 +181,17 @@ export const TrainingInfoSection = () => {
           <h3 className="text-left font-light text-4xl m-0 ">
             2. Start training and wait <br></br>~30min for the complete
           </h3>
-          <div
+          {"   "}
+          <motion.div
+            ref={refBrowser}
+            variants={browserVariants}
+            initial="hidden"
+            animate={controlBrowser}
+            whileInView="visible"
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative w-96 h-64 grid grid-rows-9 bg-blue-950
             rounded-xl border-2 border-white backdrop-blur-sm hover:scale-[1.01]
-             duration-500 shadow-lg  hover:shadow-gray-900"
+             shadow-lg  hover:shadow-gray-900"
           >
             <span
               className="border-b flex items-center justify-between
@@ -218,7 +239,7 @@ export const TrainingInfoSection = () => {
               size={72}
               className="absolute top-36 right-20 "
             />
-          </div>
+          </motion.div>
         </div>
         <Image
           alt=""

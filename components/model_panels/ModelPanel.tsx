@@ -1,11 +1,15 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import { useDashboardContext } from "../../utils/dashboardContext";
 import { ModelImage } from "../../app/types";
 import { Modal } from "@/components/Modal";
+import {
+  NotificationPayload,
+  useNotificationsContext,
+} from "@/utils/notificationsContext";
 
 // Define the props for the SDXLPanel component
 interface SDXLPanelProps {
@@ -13,13 +17,16 @@ interface SDXLPanelProps {
     setImgs: React.Dispatch<React.SetStateAction<ModelImage[]>>;
     model: string;
   }>;
+  StatusComponent: React.ComponentType;
 }
 
-export const ImagePanel: React.FC<SDXLPanelProps> = ({ FormComponent }) => {
+export const ImagePanel: React.FC<SDXLPanelProps> = ({
+  FormComponent,
+  StatusComponent,
+}) => {
   const searchParams = useSearchParams();
   const prompt = searchParams.get("prompt") || "";
   const [imgs, setImgs] = useState<ModelImage[]>([]);
-
   const { isImgLoading, setSelectedImg, selectedImg } = useDashboardContext();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,6 +41,16 @@ export const ImagePanel: React.FC<SDXLPanelProps> = ({ FormComponent }) => {
   const closeModal = () => {
     setSelectedImg(null);
   };
+  const { statusSdxl } = useNotificationsContext();
+  const [status, setStatus] = useState<any>({
+    status: "a",
+    time: "",
+  });
+
+  useEffect(() => {
+    setStatus((prev) => (prev = { ...prev, status: statusSdxl.status }));
+    console.log(statusSdxl, 123123);
+  }, [statusSdxl]);
 
   return (
     <main className="flex items-center flex-col gap-6">
@@ -61,9 +78,43 @@ export const ImagePanel: React.FC<SDXLPanelProps> = ({ FormComponent }) => {
             />
           ))}
         </div>
-      ) : null}
-
-      {isLoading && <p>loading</p>}
+      ) : (
+        <StatusComponent />
+      )}
     </main>
+  );
+};
+export const DisplayStatusSdxl = () => {
+  const { statusSdxl } = useNotificationsContext();
+  const [status, setStatus] = useState<any>({
+    status: "",
+    time: "",
+  });
+
+  useLayoutEffect(() => {
+    setStatus(statusSdxl);
+    console.log(statusSdxl);
+  }, [statusSdxl]);
+  return (
+    <div className="flex text-xl justify-center items-center">
+      {statusSdxl.status.length}
+    </div>
+  );
+};
+
+export const DisplayStatusFluxSchnell = () => {
+  const { statusFluxSchnell } = useNotificationsContext();
+  const [status, setStatus] = useState<NotificationPayload>({
+    status: "",
+    time: "",
+  });
+
+  useEffect(() => {
+    setStatus(statusFluxSchnell);
+  }, [statusFluxSchnell]);
+  return (
+    <div className="flex text-xl justify-center items-center">
+      {status.status}
+    </div>
   );
 };

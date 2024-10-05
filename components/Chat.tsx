@@ -105,7 +105,7 @@ export const Chat = () => {
     scrollToBottom();
   }, [messages]); // Zależność od zmiany wiadomości
   return (
-    <div className="p-1 h-96 flex flex-col justify-end">
+    <div className="p-1 h-72 flex flex-col justify-end">
       <div className="flex flex-col gap-1 my-0.5  overflow-y-auto">
         {messages.map((msg, index) => {
           return (

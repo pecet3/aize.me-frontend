@@ -10,14 +10,14 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5, delay: 0.1 }}
+//                 transition={{ duration: 0.5,,ease:"easeOut" delay: 0.1 }}
 //                 className="col-span-2 row-span-5 self-center flex flex-col gap-4"
 //             >
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }} className="rounded-xl w-full col-span-2 row-span-2 self-start">
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}} className="rounded-xl w-full col-span-2 row-span-2 self-start">
 //                     <Image src={"/example7.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }} className="rounded-xl w-full col-span-2 row-span-2 self-start">
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}} className="rounded-xl w-full col-span-2 row-span-2 self-start">
 //                     <Image src={"/example6.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
@@ -25,14 +25,14 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5 }}
+//                 transition={{ duration: 0.5 ,ease:"easeOut"}}
 //                 className="col-span-2 row-span-5 self-center flex flex-col gap-4"
 //             >
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example1.png"} width={400} height={400} alt=""
 //                         className="rounded-xl w-full " />
 //                 </motion.div>
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }} className="rounded-xl w-full col-span-2 row-span-2 self-start">
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}} className="rounded-xl w-full col-span-2 row-span-2 self-start">
 //                     <Image src={"/example10.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
@@ -40,10 +40,10 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5, delay: 0.2 }}
+//                 transition={{ duration: 0.5,,ease:"easeOut" delay: 0.2 }}
 //                 className=" col-span-4 row-span-2 self-end"
 //             >
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example2.png"} width={400} height={400} alt=""
 //                         className="rounded-xl w-full" />
 //                 </motion.div>
@@ -51,14 +51,14 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5, delay: 0.4 }}
+//                 transition={{ duration: 0.5,,ease:"easeOut" delay: 0.4 }}
 //                 className="rounded-xl w-full col-span-2 row-span-5 self-center flex flex-col gap-4"
 //             >
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example4.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example3.png"} width={400} height={400} alt=""
 //                         className="rounded-xl w-full" />
 //                 </motion.div>
@@ -67,15 +67,15 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5, delay: 0.25 }}
+//                 transition={{ duration: 0.5,,ease:"easeOut" delay: 0.25 }}
 //                 className="rounded-xl w-full col-span-2 row-span-4 flex flex-col justify-end self-end gap-4 "
 //             >
 
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.4 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.4 ,ease:"easeOut"}}>
 //                     <Image src={"/example11.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example12.png"} width={400} height={400} alt=""
 //                         className="rounded-xl" />
 //                 </motion.div>
@@ -101,10 +101,10 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5, delay: 0.3 }}
+//                 transition={{ duration: 0.5,,ease:"easeOut" delay: 0.3 }}
 //                 className="rounded-xl w-full col-span-2 row-span-4 "
 //             >
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example9.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
@@ -113,10 +113,10 @@ import { motion } from "framer-motion";
 //             <motion.div
 //                 initial={{ opacity: 0, y: 80 }}
 //                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5, delay: 0.3 }}
+//                 transition={{ duration: 0.5,,ease:"easeOut" delay: 0.3 }}
 //                 className="rounded-xl w-full col-span-2 row-span-4 "
 //             >
-//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+//                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 ,ease:"easeOut"}}>
 //                     <Image src={"/example8.png"} width={400} height={400} alt=""
 //                         className="rounded-xl " />
 //                 </motion.div>
@@ -131,18 +131,18 @@ export const MainGrid = () => {
   return (
     <>
       <div
-        className="md:grid hidden grid-cols-5 grid-rows-2 m-auto pb-12
+        className="md:grid hidden grid-cols-5 grid-rows-2 m-auto pb-12 
     gap-4 "
       >
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.1, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full self-end"
         >
           <Image
-            src={"/example7.png"}
+            src={"/example17.png"}
             width={400}
             height={400}
             alt=""
@@ -152,12 +152,12 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.16 }}
+          transition={{ duration: 0.16, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full self-end"
         >
           <Image
-            src={"/example6.png"}
+            src={"/example15.png"}
             width={400}
             height={400}
             alt=""
@@ -167,12 +167,12 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.24 }}
+          transition={{ duration: 0.24, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-2 self-end"
         >
           <Image
-            src={"/example2.png"}
+            src={"/example19.png"}
             width={400}
             height={400}
             alt=""
@@ -182,7 +182,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-1 self-end "
         >
@@ -197,12 +197,12 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.32 }}
+          transition={{ duration: 0.32, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-1 "
         >
           <Image
-            src={"/example1.png"}
+            src={"/example18.png"}
             width={400}
             height={400}
             alt=""
@@ -213,13 +213,13 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.48 }}
+          transition={{ duration: 0.48, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-2 "
         >
           <Image
             priority
-            src={"/example5.png"}
+            src={"/example14.png"}
             width={400}
             height={400}
             alt=""
@@ -229,12 +229,12 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.56 }}
+          transition={{ duration: 0.56, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-2 j"
         >
           <Image
-            src={"/example12.png"}
+            src={"/example20.png"}
             width={400}
             height={400}
             alt=""
@@ -243,6 +243,7 @@ export const MainGrid = () => {
           />
         </motion.div>
       </div>
+      {/* SMARTPHONES VIEW ABOVE */}
       <div
         className="m-0 mt-16 sm:mt-12 lg:m-auto md:hidden grid grid-cols-4 
     gap-2 h-[60vh]"
@@ -250,7 +251,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.16 }}
+          transition={{ duration: 0.16, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full self-end"
         >
@@ -266,7 +267,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.24 }}
+          transition={{ duration: 0.24, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-2 self-end"
         >
@@ -281,7 +282,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.1, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full self-end"
         >
@@ -297,7 +298,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.32 }}
+          transition={{ duration: 0.32, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-1 "
         >
@@ -312,7 +313,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-1 self-start"
         >
@@ -327,7 +328,7 @@ export const MainGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.48 }}
+          transition={{ duration: 0.48, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           className="rounded-xl w-full col-span-2 "
         >

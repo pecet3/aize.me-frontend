@@ -38,7 +38,7 @@ export const NavbarDashboard = () => {
   if (!user) return;
   return (
     <>
-      <div className="flex justify-between items-center w-full m-auto z-0 f">
+      <div className="flex justify-between items-center w-full m-auto">
         <motion.div
           animate={{
             backgroundColor: ["#075985", "#0f766e", "#075985"],
@@ -48,7 +48,7 @@ export const NavbarDashboard = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-32 flex justify-center m-auto sticky"
+          className="w-32 flex justify-center m-0 sticky"
         >
           .
         </motion.div>
@@ -61,7 +61,7 @@ export const NavbarDashboard = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-72 flex justify-center m-auto sticky"
+          className="w-72 flex justify-center m-0 sticky"
         >
           .
         </motion.div>
@@ -74,7 +74,7 @@ export const NavbarDashboard = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-32 flex justify-center m-auto sticky"
+          className="w-32 flex justify-center m-0 sticky"
         >
           .
         </motion.div>
@@ -113,10 +113,10 @@ export const NavbarDashboard = () => {
                                    isDropDown ? "flex flex-col" : "hidden"
                                  }`}
             >
-              <li className="py-1 px-2 hover:bg-gray-700 rounded-md duration-300 ">
+              <li className="py-1 px-2 hover:bg-blue-900 rounded-md duration-300 ">
                 <Link href="/dashboard/models/sdxl">SDXL</Link>
               </li>
-              <li className="py-1 px-2 hover:bg-gray-700 rounded-md duration-300">
+              <li className="py-1 px-2 hover:bg-blue-900 rounded-md duration-300">
                 <Link href="/dashboard/models/flux-schnell">Flux-Schnell</Link>
               </li>
             </motion.ul>
