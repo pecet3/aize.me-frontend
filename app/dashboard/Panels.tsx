@@ -5,7 +5,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useDashboardContext } from "../../utils/dashboardContext";
 import Image from "next/image";
 import { MdToken } from "react-icons/md";
-import { Chat } from "@/components/Chat";
 
 export const LeftPanel = ({ color }: { color?: string }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -92,7 +91,6 @@ export const RightPanel = ({ color }: { color?: string }) => {
             >
               Chat
             </h2>
-            <Chat />
           </div>
         </motion.div>
         <button
